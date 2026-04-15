@@ -13,11 +13,13 @@ public final class Ordinateur {
        this.ramGo = builder.ramGo;
        this.stockageGo = builder.stockageGo;
        this.ssd = builder.ssd;
+       this.carteGraphique = builder.carteGraphique;
+       this.prixEuros = builder.prixEuros;
    }
     public static class Builder {
         private final String marque;
         private final String processeur;
-        private final int ramGO;
+        private final int ramGo;
         private int stockageGo = 256;
         private boolean ssd = true;
         private String carteGraphique = "Integrée";
@@ -53,7 +55,7 @@ public final class Ordinateur {
 
    }
     public static void main(String[] args) {
-        Ordinateur pc1 = new Ordinateur.Builder("HP", "Intel i7", 32);
+        Ordinateur pc1 = new Ordinateur.Builder("HP", "Intel i7", 32) .build();
 
         System.out.println(pc1);
     }
